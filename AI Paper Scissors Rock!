@@ -21,17 +21,18 @@ def ai_paper_scissors_rock():
             else:
                 print(f"Your choice: {enter_choice}. Bot's choice: {bot_attack}.")
                 print(f" Result = Defeat!")
+
+            while True:
+                rematch = input("Do you wanna play again? [Y/N] ")
+                if rematch.upper() == "Y":
+                    break
+                elif rematch.upper() == "N":
+                    game_engine = False
+                    break
+                else:
+                    print("Invalid. Please enter valid option.")
         else:
             print("Invalid. Please enter valid option.")
 
-        while True:
-            rematch = input("Do you wanna play again? [Y/N] ")
-            if rematch.upper() == "Y":
-                break
-            elif rematch.upper() == "N":
-                game_engine = False
-                break
-            else:
-                print("Invalid. Please enter valid option.")
 
-
+ai_paper_scissors_rock()
