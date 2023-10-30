@@ -1,0 +1,13 @@
+#Roll two dice to generate a value. 
+import random
+
+class RollADice:
+
+    def roll_two_dice(self):
+        n1 = random.randint(1,6)
+        n2 = random.randint(1, 6)
+        return n1, n2
+
+
+roll = RollADice()
+print(roll.roll_two_dice())
