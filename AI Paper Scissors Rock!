@@ -6,20 +6,20 @@ def ai_paper_scissors_rock():
     print("Let's play paper scissors rock with Mr Robot!!")
 
     while game_engine:
-        enter_choice = input("> Paper, Scissors, Rock: ")
+        enter_choice = input("> Paper, Scissors, Rock: ").lower()
         bot_attack = random.choice(options)
 
         if enter_choice in options:
             if enter_choice == bot_attack:
-                print(f"Your choice: {enter_choice}. Bot choice {bot_attack}.")
-                print("Result = Tie!")
+                print(f"Your choice: {enter_choice}. Mr Robot's choice {bot_attack}.")
+                print(" Result = Tie!")
             elif (enter_choice == "paper" and bot_attack == "rock") or \
                     (enter_choice == "scissors" and bot_attack == "paper") or \
                     (enter_choice == "rock" and bot_attack == 'scissors'):
-                print(f"Your choice: {enter_choice}. Bot's choice: {bot_attack}.")
-                print("Result = Victory!")
+                print(f"Your choice: {enter_choice}. Mr Robot's choice: {bot_attack}.")
+                print(" Result = Victory!")
             else:
-                print(f"Your choice: {enter_choice}. Bot's choice: {bot_attack}.")
+                print(f"Your choice: {enter_choice}. Mr Robot's choice: {bot_attack}.")
                 print(f" Result = Defeat!")
 
             while True:
@@ -30,9 +30,9 @@ def ai_paper_scissors_rock():
                     game_engine = False
                     break
                 else:
-                    print("Invalid. Please enter valid option.")
+                    print("Invalid. Please enter a valid option.")
         else:
-            print("Invalid. Please enter valid option.")
+            print("Invalid. Please enter a valid option.")
 
 
 ai_paper_scissors_rock()
