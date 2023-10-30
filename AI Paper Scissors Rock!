@@ -1,0 +1,37 @@
+def ai_paper_scissors_rock():
+    import random
+
+    game_engine = True
+    options = ("paper", "scissors", "rock")
+    print("Let's play paper scissors rock with Mr Robot!!")
+
+    while game_engine:
+        enter_choice = input("> Paper, Scissors, Rock: ")
+        bot_attack = random.choice(options)
+
+        if enter_choice in options:
+            if enter_choice == bot_attack:
+                print(f"Your choice: {enter_choice}. Bot choice {bot_attack}.")
+                print("Result = Tie!")
+            elif (enter_choice == "paper" and bot_attack == "rock") or \
+                    (enter_choice == "scissors" and bot_attack == "paper") or \
+                    (enter_choice == "rock" and bot_attack == 'scissors'):
+                print(f"Your choice: {enter_choice}. Bot choice {bot_attack}.")
+                print("Result = Victory!")
+            else:
+                print(f"Your choice: {enter_choice}. Bot choice {bot_attack}.")
+                print(f" Result = Defeat")
+        else:
+            print("Invalid. Please enter valid option.")
+
+        while True:
+            rematch = input("Do you wanna play again? [Y/N] ")
+            if rematch.upper() == "Y":
+                break
+            elif rematch.upper() == "N":
+                game_engine = False
+                break
+            else:
+                print("Invalid. Please enter valid option.")
+
+
