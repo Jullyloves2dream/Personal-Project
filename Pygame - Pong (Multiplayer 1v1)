@@ -80,10 +80,10 @@ ball = pygame.Rect(0, 0, 30, 30)
 ball.center = (screen_width / 2, screen_height / 2)
 
 # ball speed setting
-ball_speed_x = 8
-ball_speed_y = 8
+ball_speed_x = 7
+ball_speed_y = 7
 player_speed = 0
-cpu_speed = 6
+cpu_speed = 0
 
 # point setting
 cpu_point, player_point = 0, 0
